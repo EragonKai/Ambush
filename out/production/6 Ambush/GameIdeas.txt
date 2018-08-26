@@ -1,0 +1,85 @@
+Ambush (name can be changed later if desired)
+
+A game in which you explore through a "dungeon" with multiple rooms.
+Each scene can have a different objective and possible danger. Can also be randomly generated.
+
+	- Practice making a menu and using a variable to have different input/drawings and stuff
+	- Use an input class that gets called whenever keyListener/mouseListener detects something (for neatness)
+	- Use a 2d array to have a room layout that can later be randomly created
+	- Create a starting inventory/hud to expand on later
+	- Use an abstract class room to create different layouts
+
+
+Priority:
+    1-Set up basic classes/JPanel (Screen, Runner)
+    2-Create two classes: Input and Draw. Input handles input for neatness, and Draw is used to load all images
+    3-Draw a player with 2 animation sets and get walking working correctly
+    4-Draw a placeholder menu and get button clicking working to enter the game. Can use an enum
+    5-Create a superclass "Room" with several basic properties (possible abstract? idk)
+    6-Draw a basic starting room floor tile and wall tile and get those to load correctly
+    7-Get wall collisions working with an arrayList to allow for future obstacles
+    8-Create a class that has an array of rooms it can load
+    9-Remove collisions/drawn walls if the player has completed the room(i.e. wall no longer loads based on that side in the array)
+    10-Create a HUD on the right (with health, etc) with enough space for any future ideas (items, map button, etc)
+    11-Let the player move between rooms on the map (create placeHolder rooms for this to happen
+    12-Add shooting with basic projectiles (use a separate weapon class that the player can draw from)
+    13-Create an enemy superclass with basic stats
+    14-Maybe create an enemy handler class similar to what I did in mine wave? or put that code into the room handler
+    15-Get collisions working between player projectiles and enemies
+    16-Add projectile enemy superclass
+    17-get loot on the ground working and equippable, and be able to view the items stats
+    18-Get player stats displayed and working, with items affecting them
+    19-Create more rooms/enemies/weapons, basically just CONTENT
+    20-add a map
+    21-add an inventory that works
+    22-Make the roomArray randomly generated
+    23-Think of more ideas (armor, levels, animations for attacks, more content in general, etc)
+
+
+7/24 Goals:
+    1 DONE
+    2 DONE
+    3 DONE
+
+7/25 Goals:
+    4 DONE
+    5 DONE
+    6 DONE
+    7 DONE
+    Created StartingRoomT0
+
+7/26 Goals:
+    8 DONE
+    9 DONE
+    10 DONE
+    11 DONE
+    12 DONE
+    13 DONE
+    14 DONE
+    Created StartingGun
+    Created DarkRoomT1, Goblin, LightningBearer
+
+7/27 Goals:
+    15 DONE
+    16 DONE
+    17 DONE
+    18 DONE
+    Created DesertRoomT2, LivingConstruct, Shattered Serpent Scepter
+    Created SturdyRoomT3, SturdyConstruct, Sturdy Sword
+    Created MossyRoomT4, VineJellyfish, Moss-Covered Wand
+
+7/28 Goals:
+    Created BlueRoomT5, BlueConstruct, SnowBlaze
+
+Basic Item Concept:
+    Similar to realm, don't know xmls atm so will just create a package with a ton of classes
+    Main differences will be how they affect stats + # of bullets and damage/size/speed
+    each item will be 32x32 (?)
+    Maybe have an inventory
+    Possibly only weapons, maybe add armor later
+    Items could have different passive effects (coding this would probably be messy)
+
+    notes 7/26:
+    make it so that whenever a room is completed it replaces the threat level in the array with that instance of the room so you can go back to it
+    need to create a list in the room class that keeps track of items in the currentRoom
+    whenever user presses e it switches a gun within x pixels of the user with the slot
